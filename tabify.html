@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src='./jquery.js'></script>
+        <script src='./tabify.js'></script>
+        <link href='./tabify.css' rel='stylesheet' />
+    </head>
+    <body style='margin:0;'>
+        <div class='myTabs'>
+            <ul>
+                <li>ONE</li>
+                <li>TWO</li>
+                <li>THREE</li>
+            </ul>
+            <div>
+                <h3>Page 1</h3>
+            </div>
+            <div>
+                <h3>Page 2</h3>
+            </div>
+            <div>
+                <h3>Page 3</h3>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        $(window).load(function(){
+            $('.myTabs').tabify();
+        });
+    </script>
+</html>

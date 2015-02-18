@@ -4,28 +4,133 @@
         <script src='./tabify.js'></script>
         <link href='./tabify.css' rel='stylesheet' />
     </head>
-    <body style='margin:0;'>
-        <div class='myTabs'>
-            <ul>
-                <li>ONE</li>
-                <li>TWO</li>
-                <li>THREE</li>
-            </ul>
-            <div>
-                <h3>Page 1</h3>
-            </div>
-            <div>
-                <h3>Page 2</h3>
-            </div>
-            <div>
-                <h3>Page 3</h3>
+    <body>
+
+        <div style='position:absolute;top:-10px;width:100%;text-align:center;'>
+            <span class='card'><span>TABIFY</span></span>
+            <div class='set'>
+                <span class='card'><span>SUPER</span></span>
+                <span class='card'><span>EASY</span></span>
+                <span class='card'><span>TABS</span></span>
             </div>
         </div>
-    </body>
 
+        <div class='left card' style=''>
+            <textarea>
+<div class='myTabs'>
+    <ul>
+        <li>ONE</li>
+        <li>TWO</li>
+        <li>THREE</li>
+    </ul>
+    <div>
+        <h3>Page 1</h3>
+    </div>
+    <div>
+        <h3>Page 2</h3>
+    </div>
+    <div>
+        <h3>Page 3</h3>
+    </div>
+</div>
+            </textarea>
+            <textarea>$('.myTabs').tabify();</textarea>
+        </div>
+
+        <div class='right card' style=''>
+        </div>
+
+
+    </body>
     <script>
         $(window).load(function(){
-            $('.myTabs').tabify();
+            setTimeout(function(){$('.card').addClass('active')},700);
+            //$('.myTabs').tabify();
         });
     </script>
+    <style>
+        /* latin-ext */
+        @font-face {
+            font-family: 'Inconsolata';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Inconsolata'), url(http://fonts.gstatic.com/s/inconsolata/v10/BjAYBlHtW3CJxDcjzrnZCCYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Inconsolata';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Inconsolata'), url(http://fonts.gstatic.com/s/inconsolata/v10/BjAYBlHtW3CJxDcjzrnZCI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+        body {
+            font-family:Inconsolata;
+            background: url(./background.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .card:nth-child(2){
+        }
+        .card:nth-child(3){
+            z-index:1;
+        }
+        .card:nth-child(4){
+            z-index:0;
+        }
+        .set .card.active {
+            font-size:2em;
+        }
+        .card {
+            transition:0.3s;
+            font-size: 8em;
+            width:auto;
+            padding:10px;
+            margin: 0.5rem 0 1rem 0;
+            background-color: #fff;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            background-clip: padding-box;
+            -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        .set {
+            position:relative;
+            left:0;
+            width:100%;
+            height:1000px:
+        }
+
+        .left, .right {
+            background:#fff;
+            height:70%;
+            width:45%;
+            right:0;
+            bottom:0;
+            position:absolute;
+        }
+        .left {
+            left:0;
+        }
+        .left textarea {
+            position:relative;
+            width:100%;
+            background:#444;
+            border:none;
+            height:19em;
+            text-align:left;
+            color:white;
+            font-family:monospace;
+        }
+        .left textarea:nth-child(2){
+            margin-top:2em;
+            height:3em;
+        }
+    </style>
 </html>
