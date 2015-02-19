@@ -1,136 +1,113 @@
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
+        <title>SweetAlert</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+
+        <link rel="stylesheet" type="text/css" href="./index.css">
+
+        <!-- This is what you need -->
         <script src='./jquery.js'></script>
         <script src='./tabify.js'></script>
         <link href='./tabify.css' rel='stylesheet' />
+        <!--.......................-->
+
     </head>
+
     <body>
+        <a href="https://github.com/you"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+        <h1>Tabify</h1>
+        <h2>At least it's not called Tabbr</h2>
+        <a href="https://github.com/isnit0/jquery.tabify" class="download button">Download</a>
 
-        <div style='position:absolute;top:-10px;width:100%;text-align:center;'>
-            <span class='card'><span>TABIFY</span></span>
-            <div class='set'>
-                <span class='card'><span>SUPER</span></span>
-                <span class='card'><span>EASY</span></span>
-                <span class='card'><span>TABS</span></span>
+        <!-- What does it do? -->
+        <h3>The Missing Tab Plugin.</h3>
+        <p style='width:100%;text-align:center;'>Easy to use... No special <strong class='str'>Clases</strong> or <strong class='func'>Functions</strong>, just 100% reason to remember the name.</p>
+
+        <div class="showcase normal">
+            <h4>Using it.</h4>
+            <button class='go'>Tabify!</button>
+
+            <h5>Code:</h5>
+            <br />
+            <!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;div</span> <span style="color: #a6e22e">class=</span><span style="color: #e6db74">&#39;myTabs&#39;</span><span style="color: #f92672">&gt;</span>
+<span style="color: #f92672">&emsp;&lt;ul&gt;</span>
+<span style="color: #f92672">&emsp;&emsp;&lt;li&gt;</span>ONE<span style="color: #f92672">&lt;/li&gt;</span>
+<span style="color: #f92672">&emsp;&emsp;&lt;li&gt;</span>TWO<span style="color: #f92672">&lt;/li&gt;</span>
+<span style="color: #f92672">&emsp;&emsp;&lt;li&gt;</span>THREE<span style="color: #f92672">&lt;/li&gt;</span>
+<span style="color: #f92672">&emsp;&lt;/ul&gt;</span>
+<span style="color: #f92672">&emsp;&lt;div&gt;</span>
+<span style="color: #f92672">&emsp;&emsp;&lt;p&gt;</span>Page 1<span style="color: #f92672">&lt;/p&gt;</span>
+<span style="color: #f92672">&emsp;&lt;/div&gt;</span>
+<span style="color: #f92672">&emsp;&lt;div&gt;</span>
+<span style="color: #f92672">&emsp;&emsp;&lt;p&gt;</span>Page 2<span style="color: #f92672">&lt;/p&gt;</span>
+<span style="color: #f92672">&emsp;&lt;/div&gt;</span>
+<span style="color: #f92672">&emsp;&lt;div&gt;</span>
+<span style="color: #f92672">&emsp;&emsp;&lt;p&gt;</span>Page 3<span style="color: #f92672">&lt;/p&gt;</span>
+<span style="color: #f92672">&emsp;&lt;/div&gt;</span>
+<span style="color: #f92672">&lt;/div&gt;</span>
+</pre></div>
+
+            <pre><span class='func'>$</span>(<span class="str">".myTabs"</span>).<span class="func">tabify</span>();</pre>
+
+
+
+
+            <div class="vs-icon"></div>
+        </div>
+
+        <div class="showcase sweet">
+            <h4>Tabify</h4>
+            <button class='reset'>Reset</button>
+
+            <h5>Preview:</h5>
+            <Br />
+            <div class='myTabs'>
+                <ul>
+                    <li>ONE</li>
+                    <li>TWO</li>
+                    <li>THREE</li>
+                </ul>
+                <div>
+                    <p>Page 1</p>
+                </div>
+                <div>
+                    <p>Page 2</p>
+                </div>
+                <div>
+                    <p>Page 3</p>
+                </div>
             </div>
-        </div>
 
-        <div class='left card' style=''>
-            <textarea>
-<div class='myTabs'>
-    <ul>
-        <li>ONE</li>
-        <li>TWO</li>
-        <li>THREE</li>
-    </ul>
-    <div>
-        <h3>Page 1</h3>
-    </div>
-    <div>
-        <h3>Page 2</h3>
-    </div>
-    <div>
-        <h3>Page 3</h3>
-    </div>
-</div>
-            </textarea>
-            <textarea>$('.myTabs').tabify();</textarea>
-        </div>
-
-        <div class='right card' style=''>
-        </div>
+            <script>
+                $('.go').click(function(){$('.myTabs').tabify()});
+                $('.reset').click(function(){$('.tabify, .myTabs').replaceWith($('.myTabsBak').clone().removeClass('myTabsBak').addClass('myTabs'))});
+            </script>
+            <style>
+                .myTabsBak {
+                    display:none;
+                }
+            </style>
 
 
-    </body>
-    <script>
-        $(window).load(function(){
-            setTimeout(function(){$('.card').addClass('active')},700);
-            //$('.myTabs').tabify();
-        });
-    </script>
-    <style>
-        /* latin-ext */
-        @font-face {
-            font-family: 'Inconsolata';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Inconsolata'), url(http://fonts.gstatic.com/s/inconsolata/v10/BjAYBlHtW3CJxDcjzrnZCCYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-        }
-        /* latin */
-        @font-face {
-            font-family: 'Inconsolata';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Inconsolata'), url(http://fonts.gstatic.com/s/inconsolata/v10/BjAYBlHtW3CJxDcjzrnZCI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-        }
-        body {
-            font-family:Inconsolata;
-            background: url(./background.jpg);
-            background-size: cover;
-            background-position: center center;
-        }
-        .card:nth-child(2){
-        }
-        .card:nth-child(3){
-            z-index:1;
-        }
-        .card:nth-child(4){
-            z-index:0;
-        }
-        .set .card.active {
-            font-size:2em;
-        }
-        .card {
-            transition:0.3s;
-            font-size: 8em;
-            width:auto;
-            padding:10px;
-            margin: 0.5rem 0 1rem 0;
-            background-color: #fff;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            -webkit-border-radius: 2px;
-            -moz-border-radius: 2px;
-            border-radius: 2px;
-            background-clip: padding-box;
-            -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-            -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        }
-        .set {
-            position:relative;
-            left:0;
-            width:100%;
-            height:1000px:
-        }
-
-        .left, .right {
-            background:#fff;
-            height:70%;
-            width:45%;
-            right:0;
-            bottom:0;
-            position:absolute;
-        }
-        .left {
-            left:0;
-        }
-        .left textarea {
-            position:relative;
-            width:100%;
-            background:#444;
-            border:none;
-            height:19em;
-            text-align:left;
-            color:white;
-            font-family:monospace;
-        }
-        .left textarea:nth-child(2){
-            margin-top:2em;
-            height:3em;
-        }
-    </style>
-</html>
+            <div class='myTabsBak'>
+                <ul>
+                    <li>ONE</li>
+                    <li>TWO</li>
+                    <li>THREE</li>
+                </ul>
+                <div>
+                    <p>Page 1</p>
+                </div>
+                <div>
+                    <p>Page 2</p>
+                </div>
+                <div>
+                    <p>Page 3</p>
+                </div>
+            </div>
+        </html>
